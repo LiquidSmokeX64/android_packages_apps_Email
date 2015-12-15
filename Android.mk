@@ -65,6 +65,9 @@ ifeq (eng,$(TARGET_BUILD_VARIANT))
   LOCAL_PROGUARD_FLAG_FILES += proguard-test.flags
 endif
 
+# Enable dexpreopt to speed boot time
+WITH_DEXPREOPT := true
+
 include $(BUILD_PACKAGE)
 
 # only include rules to build other stuff for the original package, not the derived package.
